@@ -18,6 +18,7 @@ app.use(express.static("public"));
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
+  useUnifiedTopology: true, // I added this to the supplied code based on error messages when running npm start.
   useFindAndModify: false
 });
 
