@@ -1,13 +1,8 @@
 let db;
 
 /* * * * * * * * * *
-
-pizza_hunt: budget_tracker
-new_pizza: new_transaction
-uploadPizza: uploadTransactions
-pizzaObjectStore: transactionObjectStore
-
-
+I just copied the idb.js file from the Module 18 lesson, Pizza-Hunt, and changed the word 'pizza' 
+to 'transaction' everywhere.
 */
 
 const request = indexedDB.open('budget_tracker', 1);
@@ -62,7 +57,7 @@ function uploadTransactions() {
     getAll.onsuccess = function() {
         // if there was data in indexedDb's store, let's send it to the api server
         if (getAll.result.length > 0) {
-                fetch('/api/transactions', {
+                fetch('/api/transaction', {
                     method: 'POST',
                     body: JSON.stringify(getAll.result),
                     headers: {
@@ -78,7 +73,7 @@ function uploadTransactions() {
                     // open one more transaction
                     const transaction = db.transaction(['new_transaction'], 'readwrite');
                     // access the new_transaction object store
-                    const transactionObjectStore = transactionObjectStore('new_transaction');
+                    const transactionObjectStore = transaction.objectStore('new_transaction');
                     // clear all items in your store
                     transactionObjectStore.clear();
 
