@@ -1,4 +1,3 @@
-// COPIED FROM MODULE 19 - NO CHANGES YET
 // Can I use this instead of typing out all the icon file names?: "./icons/icon-*.png",
 
 const FILES_TO_CACHE = [
@@ -14,6 +13,7 @@ const FILES_TO_CACHE = [
     "./icons/icon-192x192.png",
     "./icons/icon-384x384.png",
     "./icons/icon-512x512.png",
+    "./manifest.json"
 ];
 
 const APP_PREFIX = 'BudgetTracker-';

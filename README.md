@@ -1,5 +1,11 @@
-# ProjectName
-This challenge for Module X of the Coding Bootcamp is to ...
+# Budget Tracker
+This challenge for Module 19 of the Coding Bootcamp is to  update an existing budget tracker application to allow for offline access and functionality. 
+
+
+![badge](https://img.shields.io/badge/License-MIT-informational)
+
+
+* [Deployed App](#deployedApp)
 
 * [User Story](#userStory)
 
@@ -9,155 +15,106 @@ This challenge for Module X of the Coding Bootcamp is to ...
 
 * [What I Learned](#whatILearned)
 
-* [ProjectName Screenshot](#webImage)
-
-* [Sample Generated Webpage](#sampleOutput)
-
-* [ProjectName Demo](#projectDemo)
-
-* [ProjectName URL](#projectURL)
+* [Screenshots](#webImage)
 
 * [Contact Me](#contactMe)
 
 
 ---
 
+<a id="deployedApp"></a>
+
+## Deployed Budget Tracker
+
+<a href="https://budget-tracker-bjackels5.herokuapp.com/">https://budget-tracker-bjackels5.herokuapp.com/</a>
+
+---
+
 <a id="userStory"></a>
+
 ## User Story
 
-User Story
-AS AN avid traveler
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling 
+* AS AN avid traveler
+* I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
+* SO THAT my account balance is accurate when I am traveling 
 
 --- 
 
 <a id="requirements"></a>
 ## Requirements
 
-GIVEN a budget tracker without an internet connection
-WHEN the user inputs an expense or deposit
-THEN they will receive a notification that they have added an expense or deposit
-WHEN the user reestablishes an internet connection
-THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updated
-
-Once you’ve updated the existing budget tracker, it should provide the following functionality:
-
-The ability to enter deposits offline.
-
-The ability to enter expenses offline.
-
-Offline entries should be added to the tracker when the application is brought back online.
-Web Manifest
-Because this will be a mobile-first application, you’ll also need to add a web manifest to your application with the app’s metadata, to let users’ devices know what they’re installing and how the app should look on the home screen.
-
-This manifest.json file for this project will contain the following properties:
-
-name
-
-short_name
-
-icons
-
-theme_color
-
-background_color
-
-start_url
-
-display
-
-IMPORTANT
-In the module project, you used webpack to create the manifest.json file. For this application, you’ll need to create it manually and add it to the root of the public/ directory of your application. You can also review Module 19: Progressive Web Applications (PWA), Lesson 5: Convert the App to a PWA as a refresher on web manifests.
-
-Deployment to Heroku Using MongoDB Atlas
-Finally, the budget tracker has a server and uses MongoDB as its database, so you’ll need to deploy this application to Heroku using MongoDB Atlas. To review this process, look at Module 18: NoSQL, Lesson 5: Add Mongoose Validation, specifically 18.5.5: Deploy to Heroku.
+* When an budget tracker is without internet connections:
+    * When the user inputs an expense or deposit, they will receive a notification that they have added that transaction.
+    * When the user reesablishes an internet connection, the offline deposits and expenses will be added to the transaction history and their total are updated.
+* The project needs a manifest.json that contains the following properties:
+    * name
+    * short_name
+    * icons
+    * theme_color
+    * background_color
+    * start_url
+    * display
+* The project must be deployed to Heroku using MongoDB Atlas
 
 ---
 
 <a id="techUsed"></a>
+
 ## Technologies Used
+
+* MongoDB
+* MongoDB Atlas
+* Mongoose
+* Chrome Dev Tools
+* Heroku
+* IndexedDB
+* Node.js
+* Service Workers
 
 --- 
 
 <a id="whatILearned"></a>
+
 ## What I Learned
+
+### I've learned that while previous modules had a few errors here and there, the Module 19 lesson is a dumpster fire.
+
+* Information I learned in the Module, but we did not apply to the challenge:
+    * How to identify performance bottlenecks in web applications.
+    * How to explain how performance can be measured in web applications.
+    * How to explain the five main categories measured in a Lighthouse audit.
+    * How to optimize CSS, JavaScript, and media assets for performance.
+    * How to set up webpack in a new front-end project.
+    * That the Module has not been updated in a few years, and the latest versions of the technologies used in the lesson do not play well together. This resulted in the students having to figure out if they were doing something wrong (they were not), or if the Module was outdated (it is).
+* Lessons I learned and were applied in the challenge:
+    * How to use service workers to cache assets for offline functionality.
+    * How to convert an existing web application to a PWA.
+    * How to use a manifest.json in our projects, and how that will work along with a service worker to make our app a PWA.
+    * How to link a manifest to the HTML to let the browser know the app is a PWA.
 
 ---
 
 <a id="webImage"></a>
-## ProjectName Screenshot
 
-![ProjectName](./media/project-name.png)
+## Budget Tracker Screenshots
 
----
+All screenshots show the Chrome DevTools
 
-<a id="sampleOutput"></a>
+### No Transactions Entered - Online
+![Budget Tracker](./media/budget-tracker-1.png)
 
-<a href="./dist/sampleOutputFile">Sample ProjectName Output</a>
+### One Transaction Entered - Online
+![Budget Tracker](./media/budget-tracker-2.png)
 
----
+### Second Transaction Entered - Offline
+![Budget Tracker](./media/budget-tracker-3.png)
 
-## ProjectName Demo
+### Second Transaction Recorded Once Back Online
+![Budget Tracker](./media/budget-tracker-4.png)
 
-<a id="projectDemo"></a>
-
-<a href="https://youtu.be/TRyEJ-cYpcg">
-   <img src="./media/ProjectName-demo.png">
-</a>
-
----
-
-<a id="projectURL"></a>
-## ProjectName URL
-[ProjectName URL](https://bjackels5.github.io/ProjectName/)
-
----
 
 ---
 
 <a id="contactMe"></a>
 ## Contact Me
 You can reach me, Brenda Jackels, at bjackels5@gmail.com.
-
-
-
-
-
-
-What You Will Learn
-I've learned that while previous modules had a few errors here and there, this Module is a dumpster fire.
-
-By completing this module, you'll learn how to do the following:
-
-Identify performance bottlenecks in web applications.
-
-Explain how performance can be measured in web applications.
-
-Explain the five main categories measured in a Lighthouse audit.
-
-Optimize CSS, JavaScript, and media assets for performance.
-
-Set up webpack in a new front-end project.
-
-Use service workers to cache assets for offline functionality.
-
-Convert an existing web application to a PWA.
-
-How to use a manifest.json in our projects, and how that will work along with a service worker to make our app a PWA.
-
-How to link a manifest to the HTML to let the browser know the app is a PWA.
-
-How to use webpack to dynamically create a manifest.json based on configurations provided in webpack.config.js.
-
-How to add properties to the manifest.json so the user can add the PWA to the home screen of their mobile device.
-
-Measured performance metrics for a website using Chrome DevTool's Lighthouse app.
-
-Performed audits to expose performance flaws which are especially critical when dealing with slower mobile devices on sluggish networks.
-
-Learned how to use an automated build tool like webpack to bundle assets through a dependency graph to optimize performance by lazy loading and minification.
-
-Used service workers to cache the websites assets for offline functionality.
-
-Offered installable icons for quick access to our app using PWAs.
